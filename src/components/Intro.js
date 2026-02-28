@@ -1,21 +1,33 @@
 import React from "react";
 
-export default function Intro({intro}) {
+export default function Intro({ intro }) {
 	return (
-		<div className="intro">
-			<div className="intro-element">
-				<h3 style={{fontWeight:"600"}}>Hi, I am</h3>
-				<h2 style={{color:"yellow",fontSize:"40px",position:"relative",top:"-29px"}}>Subhojit Dey</h2>
-				<h4 style={{position:"relative",top:"-29px", fontWeight:400}}>
-					Web Developer, Graphics Designer, Web Designer and AR Enthusiast
-				</h4>
-                <button className="button" onClick={()=>{
-					intro.current.scrollIntoView({
-						behavior: "smooth", 
-					})
-				}}>My Projects</button>
+		<section className="terminal-window hero-window">
+			<div className="terminal-window-header">
+				<span className="dot red"></span>
+				<span className="dot yellow"></span>
+				<span className="dot green"></span>
+				<p>session: hero.sh</p>
 			</div>
-		</div>
-        // </Tilt>
+			<div className="terminal-window-body">
+				<p className="prompt-line">$ whoami</p>
+				<h1>Subhojit Dey</h1>
+				<p className="prompt-line">$ cat profile.txt</p>
+				<p className="hero-role">
+					Backend Software Engineer with 2+ years of experience building scalable
+					Java backend services and distributed systems.
+				</p>
+				<p className="prompt-line">$ ./open-projects.sh</p>
+				<button
+					type="button"
+					className="terminal-button"
+					onClick={() => {
+						intro.current.scrollIntoView({ behavior: "smooth" });
+					}}
+				>
+					cd projects
+				</button>
+			</div>
+		</section>
 	);
 }

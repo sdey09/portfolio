@@ -1,95 +1,41 @@
 import React from "react";
 import "../App.css";
 
-export default function NavBar({ home, skills, about, projects,contact }) {
+const navItems = [
+	{ label: "home", key: "home" },
+	{ label: "about", key: "about" },
+	{ label: "projects", key: "projects" },
+	{ label: "skills", key: "skills" },
+	{ label: "contact", key: "contact" },
+];
+
+export default function NavBar({ home, skills, about, projects, contact, onOpenTerminal }) {
+	const targets = { home, skills, about, projects, contact };
+
 	return (
-		<div>
-		<div
-			style={{
-				position: "fixed",
-				zIndex: "2000",
-				top: 0,
-				display: "flex",
-				backgroundColor: "#00000029",
-			}}
-		>
-			<div style={{ width: "50vw" }}></div>
-			<div
-				className="hoverDiv"
-				style={{
-					display: "grid",
-					gridTemplateColumns: "auto auto auto auto auto",
-					width: "50vw",
-					textAlign: "center",
-					fontSize: "18px",
-                    justifyContent:"space-evenly",
-                    alignContent:"stretch"
-				}}
-			>
-				<div style={{ position: "relative" }}>
-					<p
-						className="hover-effect"
-						onClick={() => {
-							home.current.scrollIntoView({
-								behavior: "smooth",
-							});
-						}}
-						style={{ cursor: "pointer" }}
-					>
-						Home
-					</p>
+		<header className="terminal-nav-wrap">
+			<nav className="terminal-nav">
+				<p className="terminal-brand">subhojit@portfolio:~$</p>
+				<div className="terminal-nav-links">
+					{navItems.map((item) => (
+						<button
+							key={item.key}
+							type="button"
+							className="terminal-link"
+							onClick={() => {
+								targets[item.key].current.scrollIntoView({
+									behavior: "smooth",
+								});
+							}}
+						>
+							{item.label}
+						</button>
+					))}
+					<button type="button" className="terminal-link" onClick={onOpenTerminal}>
+						terminal
+					</button>
 				</div>
-
-				<div style={{ position: "relative" }}>
-					<p
-						className="hover-effect"
-						onClick={() => {
-							about.current.scrollIntoView({
-								behavior: "smooth",
-							});
-						}}
-						style={{ cursor: "pointer" }}
-					>
-						About Me
-					</p>
-				</div>
-
-				<div style={{ position: "relative" }}>
-					<p
-						className="hover-effect"
-						onClick={() => {
-							projects.current.scrollIntoView({
-								behavior: "smooth",
-							});
-						}}
-						style={{ cursor: "pointer" }}
-					>
-						Projects
-					</p>
-				</div>
-				<div style={{ position: "relative" }}>
-					<p
-						className="hover-effect"
-						onClick={() => {
-							skills.current.scrollIntoView({
-								behavior: "smooth",
-							});
-						}}
-						style={{ cursor: "pointer" }}
-					>
-						Skills
-					</p>
-				</div>
-
-				<div style={{ position: "relative" }}>
-					<p onClick={() => {
-							contact.current.scrollIntoView({
-								behavior: "smooth",
-							});
-						}}className="hover-effect">Contact Me</p>
-				</div>
-			</div>
-		</div>
-		</div>
+			</nav>
+		</header>
 	);
 }

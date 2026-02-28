@@ -1,38 +1,59 @@
-import React from 'react'
-import profileAbout from '../images/ProfilePic3.png'
-import '../App.css'
-import linkedin from '../images/linkedin.png'
-import twitter from '../images/twitter.png'
-import github from '../images/github.png'
+import React from "react";
+import "../App.css";
+
+const socials = [
+	{ label: "github", link: "https://github.com/Subhojit-Dey1234" },
+	{ label: "linkedin", link: "https://www.linkedin.com/in/subhojit-dey-09/" },
+	{ label: "email", link: "mailto:subhojitdey@gmail.com" },
+];
+
+const highlights = [
+	"Software Developer at (May 2023 - Present)",
+	"Built high-throughput ingestion pipelines processing 200K+ records/sec",
+	"Improved p90 latency from 45 ms to 5 ms for high-RPS services",
+	"Led zero-downtime MySQL schema and service migrations with Spring Boot",
+];
 
 export default function About() {
-    return (
-        <div style={{height:"100vh", display:"grid", gridTemplateColumns:"auto auto", alignSelf:"center",justifyItems:"center",justifySelf:"center",fontSize:"16px"}} className="about">
-            <div>
-                <div style={{width: "65%",position:"relative",left:"55%",top:"45%",transform:"translate(-50%,-50%)"}}>
-                    <h2 style={{textAlign:"center",color:"yellow",fontSize:"40px"}} className="about-header">About Me</h2>
-                    <h3 className="about-details" style={{fontWeight:"400"}}>I am <b style={{color:"yellow"}}>Subhojit Dey</b>. I am currently a student of IIT Kharagpur. I am a frontend web developer, UI designer and AR Enthusiast.</h3>
-                    <h3 className="about-details" style={{fontWeight:"400"}}>I like building products. </h3>
-                    <h3 className="about-details" style={{fontWeight:"400"}}>I am motivated to learn exciting things everyday and make my skills sharper so I can add value to the modern world.</h3>
-                    <button className="button-resume">Download My Resume</button>
-                    <div>
-                    <a href="https://www.linkedin.com/in/subhojit-dey-09/" target="_blank" rel="noreferrer">
-                        <img style={{width:"12%",margin:"20px"}} src={linkedin} alt="linkedin"/>
-                    </a>
-                    <a href="https://twitter.com/thesubhojitdey" target="_blank" rel="noreferrer">
-                        <img style={{width:"12%",margin:"20px"}} src={twitter} alt="linkedin"/>
-                    </a>
-                    <a href="https://github.com/Subhojit-Dey1234" target="_blank" rel="noreferrer">
-                        <img style={{width:"12%",margin:"20px"}} src={github} alt="linkedin"/>
-                    </a>
-                </div>
-                </div>
-            </div>
-            
-            <div>
-                <img src={profileAbout} alt="profile" style={{width:"50%",alignSelf:"center",position:"relative",left:"50%",top:"50%",transform:"translate(-50%,-50%)"}}/>
-            </div>
-            
-        </div>
-    )
+	return (
+		<section className="section-shell">
+			<div className="terminal-window">
+				<div className="terminal-window-header">
+					<span className="dot red"></span>
+					<span className="dot yellow"></span>
+					<span className="dot green"></span>
+					<p>about.md</p>
+				</div>
+				<div className="terminal-window-body">
+					<h2 className="section-title">about_me</h2>
+					<p>
+						Backend-focused software engineer with experience in Java, Spring Boot,
+						distributed systems, and production service ownership.
+					</p>
+					<p className="prompt-line">$ cat impact.log</p>
+					<ul className="about-list">
+						{highlights.map((item) => (
+							<li key={item}>{item}</li>
+						))}
+					</ul>
+					<p>
+						Education: B.Tech, IIT Kharagpur (2019 - 2023)
+					</p>
+					<div className="social-row">
+						{socials.map((item) => (
+							<a
+								key={item.label}
+								href={item.link}
+								target={item.label === "email" ? undefined : "_blank"}
+								rel={item.label === "email" ? undefined : "noreferrer"}
+								className="terminal-anchor"
+							>
+								{item.label}
+							</a>
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+	);
 }

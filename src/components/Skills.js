@@ -1,42 +1,55 @@
-import React from 'react'
-import python from '../images/python.png'
-import django from '../images/django (1).png'
-import js from '../images/javascript.png'
-import html from '../images/html-5.png'
-import css from '../images/css.png'
-import unity from '../images/unity1.png'
-import photoshop from '../images/photoshop.png'
-import illustrator from '../images/illustrator.png'
-import premier from '../images/premiere.png'
-import csharp from '../images/hashtag.png'
-import '../App.css'
+import React from "react";
+import "../App.css";
 
+const skillGroups = [
+	{
+		title: "languages",
+		items: ["Java", "Python", "SQL"],
+	},
+	{
+		title: "backend_and_systems",
+		items: ["Spring Boot", "JPA/Hibernate", "gRPC", "REST APIs"],
+	},
+	{
+		title: "distributed_and_data",
+		items: ["Databricks", "PySpark", "Delta Lake", "Redis"],
+	},
+	{
+		title: "cloud_and_infra",
+		items: ["AWS (S3, EC2, Lambda)", "Docker", "Kubernetes (EKS)"],
+	},
+	{
+		title: "observability",
+		items: ["Prometheus", "Grafana", "JUnit", "Mockito"],
+	},
+	];
 
 export default function Skills() {
-    return (
-        <div style={{backgroundColor:"black",position:"relative",zIndex:"100"}}>
-            <h1 style={{textAlign:"center",fontSize:"40px"}}>Skills</h1>
-            <div className="skills">
-            <div className="element">
-               <h3>Web Development</h3>
-               <img src={html} alt="lnag" />
-               <img src={css} alt="lnag" />
-               <img src={js} alt="lnag" />
-               <img src={python} alt="lnag" />
-               <img src={django} alt="lnag" />
-            </div>
-            <div className="element">
-                <h3>AR App Development</h3>
-                <img src={unity} alt="lnag" style={{position:"relative",bottom:"30px"}}/>
-                <img src={csharp} alt="lnag"/>
-            </div>
-            <div className="element">
-                <h3>Graphic Design and Video Editing</h3>
-                <img src={photoshop} alt="lnag" />
-                <img src={illustrator} alt="lnag" />
-                <img src={premier} alt="lnag" />
-            </div>
-            </div>
-        </div>
-    )
+	return (
+		<section className="section-shell">
+			<div className="terminal-window">
+				<div className="terminal-window-header">
+					<span className="dot red"></span>
+					<span className="dot yellow"></span>
+					<span className="dot green"></span>
+					<p>skills.json</p>
+				</div>
+				<div className="terminal-window-body">
+					<h2 className="section-title">skills</h2>
+					<div className="skills-grid">
+						{skillGroups.map((group) => (
+							<div className="skill-card" key={group.title}>
+								<p className="prompt-line">$ ls {group.title}</p>
+								<ul>
+									{group.items.map((item) => (
+										<li key={item}>{item}</li>
+									))}
+								</ul>
+							</div>
+						))}
+					</div>
+				</div>
+			</div>
+		</section>
+	);
 }
