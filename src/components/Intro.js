@@ -14,8 +14,9 @@ export default function Intro({ intro }) {
 				<h1>Subhojit Dey</h1>
 				<p className="prompt-line">$ cat profile.txt</p>
 				<p className="hero-role">
-					Backend Software Engineer with 2+ years of experience building scalable
-					Java backend services and distributed systems.
+					Senior Backend Software Engineer with 3+ years designing and scaling
+					distributed systems, microservices, and event-driven architectures in
+					Java, Spring Boot, and AWS.
 				</p>
 				<p className="prompt-line">$ ./open-projects.sh</p>
 				<button

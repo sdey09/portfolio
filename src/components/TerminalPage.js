@@ -13,7 +13,7 @@ const commandMap = {
 	],
 	whoami: ["Subhojit Dey"],
 	"cat profile.txt": [
-		"Backend Software Engineer with 2+ years of experience in Java, Spring, distributed systems, and cloud services.",
+		"Senior Backend Software Engineer with 3+ years designing and scaling distributed systems, microservices, and event-driven architectures in Java, Spring Boot, and AWS.",
 	],
 	"./open-projects.sh": [
 		"1) codecrafters-redis-java",

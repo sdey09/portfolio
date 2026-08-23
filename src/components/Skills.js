@@ -4,25 +4,55 @@ import "../App.css";
 const skillGroups = [
 	{
 		title: "languages",
-		items: ["Java", "Python", "SQL"],
+		items: ["Java", "Python", "SQL", "TypeScript", "Groovy"],
 	},
 	{
-		title: "backend_and_systems",
-		items: ["Spring Boot", "JPA/Hibernate", "gRPC", "REST APIs"],
+		title: "backend_and_architecture",
+		items: [
+			"Spring Boot",
+			"Spring WebFlux",
+			"Microservices",
+			"REST APIs",
+			"gRPC",
+			"Protocol Buffers",
+			"JPA/Hibernate",
+			"R2DBC",
+			"Apache Kafka",
+			"Server-Sent Events (SSE)",
+			"Event-Driven Architecture",
+			"Distributed Systems",
+			"System Design",
+		],
 	},
 	{
-		title: "distributed_and_data",
-		items: ["Databricks", "PySpark", "Delta Lake", "Redis"],
+		title: "data_and_cloud",
+		items: [
+			"Databricks (Autoloader, Delta Lake, PySpark)",
+			"Amazon DynamoDB",
+			"MySQL",
+			"Redis",
+			"Dragonfly",
+			"AWS (EKS, S3, Lambda)",
+			"Terraform",
+			"Data Pipelines",
+			"ETL",
+		],
 	},
 	{
-		title: "cloud_and_infra",
-		items: ["AWS (S3, EC2, Lambda)", "Docker", "Kubernetes (EKS)"],
+		title: "devops_and_observability",
+		items: [
+			"Kubernetes (Helm, HPA/KEDA, Istio, Flagger)",
+			"Docker",
+			"Jenkins",
+			"CI/CD",
+			"Prometheus",
+			"Grafana",
+			"OpenTelemetry",
+			"Soda",
+			"Performance Optimization",
+		],
 	},
-	{
-		title: "observability",
-		items: ["Prometheus", "Grafana", "JUnit", "Mockito"],
-	},
-	];
+];
 
 export default function Skills() {
 	return (

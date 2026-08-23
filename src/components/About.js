@@ -2,16 +2,18 @@ import React from "react";
 import "../App.css";
 
 const socials = [
-	{ label: "github", link: "https://github.com/Subhojit-Dey1234" },
+	{ label: "github", link: "https://github.com/sdey09" },
 	{ label: "linkedin", link: "https://www.linkedin.com/in/subhojit-dey-09/" },
-	{ label: "email", link: "mailto:subhojitdey@gmail.com" },
+	{ label: "email", link: "mailto:subhojitsdey@gmail.com" },
 ];
 
 const highlights = [
-	"Software Developer at (May 2023 - Present)",
-	"Built high-throughput ingestion pipelines processing 200K+ records/sec",
-	"Improved p90 latency from 45 ms to 5 ms for high-RPS services",
-	"Led zero-downtime MySQL schema and service migrations with Spring Boot",
+	"Senior Software Engineer, Integral Ad Science (IAS) — Apr 2026 - Present",
+	"Software Engineer, Integral Ad Science (IAS) — May 2023 - Mar 2026",
+	"Architected a multi-tenant alerting platform on Databricks, DynamoDB & MySQL across 4 channels",
+	"Improved p99 latency by 88% (45 ms to 5 ms) at 500K requests/sec on a gRPC microservice",
+	"Migrated the in-memory datastore to Dragonfly, cutting pod memory footprint by 90% across 5 AWS regions",
+	"Designed a real-time ingestion pipeline processing 50B+ events/day on Databricks Autoloader, Kafka & Delta Lake",
 ];
 
 export default function About() {
@@ -27,8 +29,11 @@ export default function About() {
 				<div className="terminal-window-body">
 					<h2 className="section-title">about_me</h2>
 					<p>
-						Backend-focused software engineer with experience in Java, Spring Boot,
-						distributed systems, and production service ownership.
+						Senior Backend Software Engineer with 3+ years designing and scaling
+						distributed systems, microservices, and event-driven architectures in
+						Java, Spring Boot, and AWS. Expert in performance optimization,
+						large-scale data engineering, and cloud-native infrastructure on
+						Kubernetes.
 					</p>
 					<p className="prompt-line">$ cat impact.log</p>
 					<ul className="about-list">

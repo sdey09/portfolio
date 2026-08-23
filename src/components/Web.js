@@ -4,25 +4,25 @@ import Projects from "./Projects";
 
 const projectList = [
 	{
-		name: "Codecrafters Redis Java",
+		name: "Redis-Compatible In-Memory Data Store",
 		details:
-			"Implemented a Redis-compatible in-memory key-value store in Java with RESP parsing, concurrent client handling, TTL expiration, and stream operations.",
+			"Engineered a Redis-compatible key-value store from scratch over raw TCP (RESP protocol) with thread-safe concurrent connections, core commands (SET, GET, DEL, INCR, Streams with blocking XREAD), and TTL-based expiration.",
 		stack: "Java, TCP sockets, concurrency, Redis protocol",
-		link: "https://github.com/Subhojit-Dey1234/codecrafters-redis-java",
+		link: "https://github.com/sdey09/codecrafters-redis-java",
 	},
 	{
-		name: "TSG Hackathon Netlify",
+		name: "TSG Website Hackathon",
 		details:
-			"Built a hackathon platform with real-time notifications and event-driven flows for concurrent users.",
-		stack: "MERN stack, Socket.io, Netlify",
-		link: "https://github.com/Subhojit-Dey1234/TSG-HackathonNetlify",
+			"Developed a real-time notification system delivering live updates across concurrent users at IIT Kharagpur; awarded Best Feature among all participating teams.",
+		stack: "MongoDB, Express, React, Node.js, Socket.io",
+		link: "https://github.com/sdey09/TSG-HackathonNetlify",
 	},
 	{
 		name: "Music Upload Spring",
 		details:
 			"Designed backend APIs with JWT auth, role-based access, S3 uploads with deduplication, and low-latency HTTP range-based streaming.",
 		stack: "Java, Spring Boot, AWS S3, JWT",
-		link: "https://github.com/Subhojit-Dey1234/music_upload_spring",
+		link: "https://github.com/sdey09/music_upload_spring",
 	},
 ];
 

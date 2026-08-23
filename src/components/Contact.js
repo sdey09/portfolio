@@ -24,7 +24,7 @@ export default function Contact() {
 							Google Form
 						</a>
 						<a
-							href="https://github.com/Subhojit-Dey1234"
+							href="https://github.com/sdey09"
 							target="_blank"
 							rel="noreferrer"
 							className="terminal-anchor"
