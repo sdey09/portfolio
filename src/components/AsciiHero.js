@@ -20,7 +20,7 @@ export default function AsciiHero() {
 		const height = mount.clientHeight;
 
 		const scene = new THREE.Scene();
-		scene.background = new THREE.Color(0x070b12);
+		scene.background = new THREE.Color(0x0a0a0a);
 
 		const camera = new THREE.PerspectiveCamera(45, width / height, 1, 100);
 		camera.position.set(0, 0, 4.4);
@@ -32,7 +32,7 @@ export default function AsciiHero() {
 
 		const geometry = new THREE.IcosahedronGeometry(1.5, 1);
 		const material = new THREE.MeshStandardMaterial({
-			color: 0x40f57a,
+			color: 0xf2f2f2,
 			flatShading: true,
 		});
 		const mesh = new THREE.Mesh(geometry, material);
@@ -42,12 +42,21 @@ export default function AsciiHero() {
 		renderer.setPixelRatio(1);
 		renderer.setSize(width, height);
 
+		const asciiFont = '"JetBrains Mono", "Courier New", monospace';
+
 		const effect = new AsciiEffect(renderer, " .:-=+*#%@", {
 			invert: true,
 			resolution: 0.18,
 		});
+		const applyAsciiStyle = () => {
+			const table = effect.domElement.querySelector("table");
+			if (table) {
+				table.style.fontFamily = asciiFont;
+			}
+		};
 		effect.setSize(width, height);
-		effect.domElement.style.color = "var(--accent)";
+		applyAsciiStyle();
+		effect.domElement.style.color = "#f2f2f2";
 		effect.domElement.style.backgroundColor = "transparent";
 
 		mount.appendChild(effect.domElement);
@@ -88,6 +97,7 @@ export default function AsciiHero() {
 			camera.updateProjectionMatrix();
 			renderer.setSize(w, h);
 			effect.setSize(w, h);
+			applyAsciiStyle();
 			renderFrame();
 		};
 		window.addEventListener("resize", handleResize);

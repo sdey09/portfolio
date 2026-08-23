@@ -1,11 +1,11 @@
 :root {
-  --bg: #070b12;
-  --panel: #0e1623;
-  --panel-border: #2a3a4d;
-  --text: #d4ffe1;
-  --muted: #95b8a2;
-  --accent: #40f57a;
-  --accent-soft: rgba(64, 245, 122, 0.2);
+  --bg: #0a0a0a;
+  --panel: #121212;
+  --panel-border: #3a3a3a;
+  --text: #f2f2f2;
+  --muted: #9a9a9a;
+  --accent: #ffffff;
+  --accent-soft: rgba(255, 255, 255, 0.16);
 }
 
 * {
@@ -16,8 +16,8 @@
 .app-shell {
   min-height: 100vh;
   background:
-    radial-gradient(circle at 20% 10%, rgba(64, 245, 122, 0.08), transparent 35%),
-    radial-gradient(circle at 85% 90%, rgba(24, 119, 242, 0.08), transparent 30%),
+    radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.06), transparent 35%),
+    radial-gradient(circle at 85% 90%, rgba(255, 255, 255, 0.04), transparent 30%),
     var(--bg);
   color: var(--text);
 }
@@ -53,15 +53,15 @@
   display: grid;
   gap: 0.55rem;
   padding: 0.9rem;
-  border: 1px solid rgba(149, 184, 162, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 0.7rem;
-  background: rgba(9, 14, 22, 0.9);
+  background: rgba(10, 10, 10, 0.9);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
 .command-chip {
   color: var(--muted);
-  border: 1px solid rgba(149, 184, 162, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 0.45rem;
   padding: 0.45rem 0.55rem;
   background: rgba(255, 255, 255, 0.02);
@@ -83,8 +83,8 @@
   width: 100%;
   z-index: 50;
   backdrop-filter: blur(6px);
-  background: rgba(7, 11, 18, 0.75);
-  border-bottom: 1px solid rgba(149, 184, 162, 0.2);
+  background: rgba(8, 8, 8, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
 }
 
 .terminal-nav {
@@ -126,7 +126,7 @@
 .terminal-link:hover {
   color: var(--accent);
   border-color: var(--accent-soft);
-  background: rgba(64, 245, 122, 0.06);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .hero-shell {
@@ -142,16 +142,16 @@
 .terminal-window {
   border: 1px solid var(--panel-border);
   border-radius: 0.8rem;
-  background: linear-gradient(180deg, rgba(17, 25, 38, 0.95), rgba(10, 16, 26, 0.98));
+  background: linear-gradient(180deg, rgba(20, 20, 20, 0.95), rgba(10, 10, 10, 0.98));
   overflow: hidden;
-  box-shadow: 0 0 0 1px rgba(64, 245, 122, 0.08), 0 10px 25px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 10px 25px rgba(0, 0, 0, 0.35);
 }
 
 .terminal-window-header {
   display: flex;
   align-items: center;
   gap: 0.45rem;
-  border-bottom: 1px solid rgba(149, 184, 162, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
   padding: 0.75rem 1rem;
   background: rgba(255, 255, 255, 0.02);
 }
@@ -169,15 +169,15 @@
 }
 
 .dot.red {
-  background: #ff605c;
+  background: #4a4a4a;
 }
 
 .dot.yellow {
-  background: #ffbd44;
+  background: #8a8a8a;
 }
 
 .dot.green {
-  background: #00ca4e;
+  background: #e0e0e0;
 }
 
 .terminal-window-body {
@@ -220,7 +220,7 @@
 .profile-image {
   width: min(100%, 240px);
   border-radius: 0.75rem;
-  border: 1px solid rgba(64, 245, 122, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .prompt-line {
@@ -247,7 +247,7 @@
 }
 
 .terminal-button:hover {
-  background: rgba(64, 245, 122, 0.12);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .section-title {
@@ -275,14 +275,14 @@
   color: var(--accent);
   text-decoration: none;
   word-break: break-all;
-  border: 1px solid rgba(64, 245, 122, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 0.45rem;
   padding: 0.45rem 0.65rem;
   transition: 0.2s ease;
 }
 
 .terminal-anchor:hover {
-  background: rgba(64, 245, 122, 0.12);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .skills-grid {
@@ -292,7 +292,7 @@
 }
 
 .skill-card {
-  border: 1px solid rgba(149, 184, 162, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 0.65rem;
   padding: 0.9rem;
   background: rgba(255, 255, 255, 0.02);
@@ -312,7 +312,7 @@
 }
 
 .project-card {
-  border: 1px solid rgba(149, 184, 162, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 0.65rem;
   padding: 0.95rem;
   background: rgba(255, 255, 255, 0.02);
@@ -370,15 +370,15 @@
 }
 
 .terminal-line.command {
-  color: #8db59d;
+  color: #a8a8a8;
 }
 
 .terminal-line.output {
-  color: #e8fff1;
+  color: #f0f0f0;
 }
 
 .terminal-input-row {
-  border-top: 1px solid rgba(149, 184, 162, 0.2);
+  border-top: 1px solid rgba(255, 255, 255, 0.16);
   display: flex;
   align-items: center;
   gap: 0.55rem;
